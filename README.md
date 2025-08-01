@@ -2,7 +2,8 @@
 ## 👨‍💻 [陈刑 (chenxing-dev)](https://github.com/chenxing-dev)
 I'm a **Frontend Developer**.
 
-**Development Philosophy**:  🧠 Think First · 💻 Code Smart · ✨ Design with Heart  
+**Development Philosophy**:  
+🧠 Think First · 💻 Code Smart · ✨ Design with Heart  
 
 ## 🛠️ Tech Stack
 
@@ -26,7 +27,6 @@ I'm a **Frontend Developer**.
 ## 📊 GitHub Stats
 
 <div align="center">
-  
   <!-- GitHub Readme Stats -->
   <a href="https://github.com/chenxing-dev">
     <img height="180em" src="https://github-readme-stats.vercel.app/api?username=chenxing-dev&show_icons=true&theme=graywhite&hide_border=true" alt="GitHub Stats" />
@@ -34,6 +34,6 @@ I'm a **Frontend Developer**.
   </a>  
 </div>
 
-## 📬 Connect
+## 📬 Contact
   
-[![GitHub](https://img.shields.io/badge/GitHub-white?style=for-the-badge&logo=github&logoColor=#181717)](https://github.com/chenxing-dev) [![Weibo](https://img.shields.io/badge/Weibo-E6162D?style=for-the-badge&logo=sinaweibo&logoColor=white)](https://weibo.com/u/7874224893) [![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://blog.chenxing.dev)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/chenxing-dev) [![Weibo](https://img.shields.io/badge/Weibo-E6162D?style=for-the-badge&logo=sinaweibo&logoColor=white)](https://weibo.com/u/7874224893) [![Blog](https://img.shields.io/badge/Blog-FF5722?style=for-the-badge&logo=blogger&logoColor=white)](https://blog.chenxing.dev)
