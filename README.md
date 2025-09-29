@@ -26,7 +26,6 @@ Building interactive web experiences with modern frameworks while exploring crea
 - **[Arduino RGB Controller](https://github.com/chenxing-dev/arduino-rgb-light)** - Custom lighting system (C++, FastLED)
 
 #### Creative & Games
-- **[Potion Crafter](https://github.com/chenxing-dev/pygame-potion-crafter)** - Alchemy cozy game (Python, Pygame)
 - **[Terminal RPG](https://github.com/chenxing-dev/text-rpg)** - CLI adventure game (Node.js, JavaScript)
 - **[WeChat Mini Program](https://github.com/chenxing-dev/wechat-prank)** - Meituan interface implementation
 
