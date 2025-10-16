@@ -1,4 +1,4 @@
-<h1 align="center">👨‍💻 <a src="https://github.com/chenxing-dev">陈刑 (chenxing-dev)</a></h1>
+<h1 align="center">👨‍💻 <a href="https://github.com/chenxing-dev">陈刑 (chenxing-dev)</a></h1>
 <h3 align="center">Frontend Developer & Creative Technologist</h3>
 
 Building interactive web experiences with modern frameworks while exploring creative applications across game development, systems programming, and hardware.
