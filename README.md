@@ -15,19 +15,18 @@ Building interactive web experiences with modern frameworks while exploring crea
 ### 📁 Project Highlights
 
 #### Interactive Frontend
-- **[Portfolio OS](https://chenxing-dev.github.io)** - Web-based OS interface with draggable windows and terminal (Vue, TypeScript)
-- **[Linux Distribution Quiz](https://github.com/chenxing-dev/linux-distro-quiz)** - Distro recommendation web app (React, TypeScript, Framer Motion)
-- **[Drink Tier List](https://github.com/chenxing-dev/drink-tier-list)** - Beverage tier list (Preact, TypeScript, TailwindCSS)
-- **[Neobrutalism Blog](https://github.com/chenxing-dev/blog)** - Technical blog with bold design (Astro, TailwindCSS)
+- **[Portfolio OS](https://chenxing-dev.github.io)** – Web-based OS with draggable windows and a terminal (Vue, TypeScript)
+- **[Neobrutalism Blog](https://blog.chenxing.dev/)** – Technical blog with bold neobrutalism design (Astro, TailwindCSS)
+- **[Leung Cha](https://chenxing-dev.github.io/leung-cha/)** – Chinese pixel-art herbal tea brewer with drag-and-drop, brewing animation, and recipe checks (React, TypeScript, react-dnd, TailwindCSS)
+- **[Linux Distribution Quiz](https://chenxing-dev.github.io/linux-distro-quiz/)** – Find your ideal Linux distro (React, TypeScript, TailwindCSS, Framer Motion)
+- **[Drink Tier List](https://chenxing-dev.github.io/drink-tier-list/)** – Personal beverage tier list (Preact, TypeScript, TailwindCSS)
+- **[Startpage Alpine](https://chenxing-dev.github.io/startpage-alpine/)** – Lightweight TUI-style startpage (Vanilla JS, Alpine.js)
+
 
 #### Tools & Systems
-- **[Dotfiles](https://github.com/chenxing-dev/dotfiles)** - Arch Linux configuration (Qtile, Rofi, Yazi)
-- **[File Transfer Tool](https://github.com/chenxing-dev/file-transfer)** - Local network file sharing (Python, Flask)
-- **[Arduino RGB Controller](https://github.com/chenxing-dev/arduino-rgb-light)** - Custom lighting system (C++, FastLED)
-
-#### Creative & Games
-- **[Terminal RPG](https://github.com/chenxing-dev/text-rpg)** - CLI adventure game (Node.js, JavaScript)
-- **[WeChat Mini Program](https://github.com/chenxing-dev/wechat-prank)** - Meituan interface implementation
+- **[Dotfiles](https://github.com/chenxing-dev/dotfiles)** – Arch Linux setup with Qtile, Rofi, Yazi, and automation
+- **[File Transfer Tool](https://github.com/chenxing-dev/file-transfer)** – Simple local network file sharing (Python, Flask)
+- **[Arduino RGB Controller](https://github.com/chenxing-dev/arduino-rgb-light)** – RGB LED controller with multiple modes (C++, FastLED)
 
 ## 📊 GitHub Stats
 
