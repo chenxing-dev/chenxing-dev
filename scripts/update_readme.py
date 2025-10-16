@@ -67,12 +67,13 @@ def fetch_posts():
         except (requests.exceptions.RequestException, ET.ParseError) as e:
             last_err = e
             continue
-    # If we reach here, no feed found
+    # If we reach here, no feed was found. Report the attempted paths and
+    # the last error (if any) and return None to indicate a fetch failure.
     print('No RSS feed found; tried paths:', [
           BASE_BLOG_URL + p for p in FEED_PATHS], file=sys.stderr)
     if last_err:
         print('Last error:', last_err, file=sys.stderr)
-    return []
+    return None
 
 
 def render_markdown(posts, lang='en'):
@@ -138,13 +139,22 @@ def main():
     except (requests.exceptions.RequestException, ET.ParseError) as e:
         print('Failed fetching RSS:', e, file=sys.stderr)
         return 1
+
+    # If fetch_posts returned None, no feed was found; exit without
+    # updating READMEs or printing a success message.
+    if posts is None:
+        return 1
+
     md_en = render_markdown(posts, 'en')
     md_zh = render_markdown(posts, 'zh')
     ok1 = replace_section(READMES[0], md_en)
     ok2 = replace_section(READMES[1], md_zh)
     if not (ok1 and ok2):
         return 2
-    print('Updated READMEs with latest posts at', datetime.utcnow().isoformat())
+    # Use a timezone-aware UTC timestamp to avoid DeprecationWarning with
+    # datetime.utcnow(). Use datetime.now(timezone.utc) instead.
+    from datetime import timezone
+    print('Updated READMEs with latest posts at', datetime.now(timezone.utc).isoformat())
     return 0
 
 

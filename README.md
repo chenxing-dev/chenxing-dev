@@ -58,8 +58,12 @@
 ### Recent posts
 
 <!-- RECENT_BLOGS_START -->
+- [Checking Laptop Battery Status via Sysfs on Arch Linux](https://blog.chenxing-dev/battery-status-sysfs/)
+- [Minimal GRUB Customization Without grub-customizer](https://blog.chenxing-dev/grub/)
+- [Getting Started with Raspberry Pi 4B: Minimal Setup Guide](https://blog.chenxing-dev/raspberry-pi-4b-minimal-setup/)
+- [Building my OS-style portfolio site with Vue 3 and GSAP](https://blog.chenxing-dev/os-style-portfolio-vue3-gsap/)
+- [LAN Hosting Guide: Access Your Projects Across Home Devices](https://blog.chenxing-dev/lan-hosting-guide/)
 
-TBA
 
 <!-- RECENT_BLOGS_END -->
 
