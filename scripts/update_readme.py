@@ -6,7 +6,8 @@ import sys
 import os
 import re
 import xml.etree.ElementTree as ET
-from datetime import datetime
+from datetime import datetime, timezone
+from email.utils import parsedate_to_datetime
 import requests
 
 # Config
@@ -81,8 +82,6 @@ def render_markdown(posts, lang='en'):
     if not posts:
         return '\nTBA\n' if lang == 'en' else '\n暂无\n'
 
-    from datetime import datetime as _dt
-
     def _format_date(dstr):
         """Best-effort normalize a date string to YYYY-MM-DD.
 
@@ -98,11 +97,10 @@ def render_markdown(posts, lang='en'):
 
         # 1) RFC-2822 (e.g. 'Wed, 01 Oct 2025 00:00:00 GMT')
         try:
-            from email.utils import parsedate_to_datetime
-
             dt = parsedate_to_datetime(dstr)
             return dt.date().isoformat()
-        except Exception:
+        except (TypeError, ValueError):
+            # parsedate_to_datetime may raise TypeError/ValueError on invalid input
             pass
 
         # 2) ISO-8601 via fromisoformat (Python handles most variants except 'Z')
@@ -111,17 +109,19 @@ def render_markdown(posts, lang='en'):
             if s.endswith('Z'):
                 # fromisoformat doesn't accept trailing 'Z' — convert to +00:00
                 s = s[:-1] + '+00:00'
-            dt = _dt.fromisoformat(s)
+            dt = datetime.fromisoformat(s)
             return dt.date().isoformat()
-        except Exception:
+        except ValueError:
+            # fromisoformat raises ValueError on parse failure
             pass
 
         # 3) A couple of strptime fallbacks for other common layouts
         for fmt in ('%a, %d %b %Y %H:%M:%S %z', '%Y-%m-%dT%H:%M:%S%z', '%Y-%m-%dT%H:%M:%S'):
             try:
-                dt = _dt.strptime(dstr, fmt)
+                dt = datetime.strptime(dstr, fmt)
                 return dt.date().isoformat()
-            except Exception:
+            except ValueError:
+                # strptime raises ValueError if format doesn't match
                 continue
 
         # 4) Give up: return trimmed original
@@ -199,7 +199,6 @@ def main():
         return 2
     # Use a timezone-aware UTC timestamp to avoid DeprecationWarning with
     # datetime.utcnow(). Use datetime.now(timezone.utc) instead.
-    from datetime import timezone
     print('Updated READMEs with latest posts at',
           datetime.now(timezone.utc).isoformat())
     return 0
