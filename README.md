@@ -52,6 +52,8 @@
   </a>
 </div>
 
+<p align="center"><sub style="color:#6b7280">提示：GitHub Readme Stats 服务偶尔会超时或限流，若上方图卡未加载，请稍后刷新。</sub></p>
+
 ### 📬 Contact
 
 - **Weibo:** [@陈刑很刑](https://weibo.com/u/7874224893)
