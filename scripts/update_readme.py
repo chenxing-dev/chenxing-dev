@@ -11,7 +11,7 @@ import requests
 
 # Config
 BASE_BLOG_URL = 'https://blog.chenxing.dev'
-FEED_PATHS = ['/rss.xml', '/feed.xml', '/atom.xml', '/index.xml']
+FEED_PATHS = ['/rss.xml']
 RSS_URL = None
 NUM_POSTS = 5
 
@@ -26,19 +26,13 @@ END_MARKER = '<!-- RECENT_BLOGS_END -->'
 
 
 def fetch_posts():
-    """Attempt to fetch blog posts from common RSS/Atom feed locations.
+    """Fetch recent posts from the site's RSS feed.
 
-    The function iterates over FEED_PATHS, attempts an HTTP GET for each
-    candidate feed URL, parses the returned XML as RSS or Atom, and
-    returns up to NUM_POSTS items as a list of dicts with keys: 'title',
-    'link', and 'pub'. If no feed is found or parsing fails for all
-    candidates, an empty list is returned. Network and parse exceptions
-    are caught internally and the last error is printed to stderr.
-
-    Returns:
-        list[dict]: List of post dictionaries, possibly empty.
+    This function attempts an HTTP GET for the site's RSS feeds.
+    Returns a list of dicts with keys: 'title', 'link', 'pub', 'tags'.
+    If no RSS feed is reachable or parsing fails, it
+    returns None and prints the last error to stderr.
     """
-    # Try common feed locations
     last_err = None
     for path in FEED_PATHS:
         url = BASE_BLOG_URL.rstrip('/') + path
@@ -46,29 +40,25 @@ def fetch_posts():
             resp = requests.get(url, timeout=10)
             resp.raise_for_status()
             root = ET.fromstring(resp.text)
-            items = root.findall(
-                './/item') or root.findall('.//{http://www.w3.org/2005/Atom}entry')
+            items = root.findall('.//item')
             posts = []
             for item in items[:NUM_POSTS]:
-                title = item.findtext('title') or item.find(
-                    '{http://www.w3.org/2005/Atom}title')
-                link = item.findtext('link')
-                if not link:
-                    # atom link handling
-                    link_el = item.find(
-                        "link[@rel='alternate']") or item.find('link')
-                    if link_el is not None:
-                        link = link_el.get('href') or link_el.text
-                if not link:
-                    link = BASE_BLOG_URL
-                posts.append({'title': title if title is not None else 'Untitled',
-                             'link': link, 'pub': item.findtext('pubDate')})
+                title = item.findtext('title')
+                link = item.findtext('link') or BASE_BLOG_URL
+                pub = item.findtext('pubDate')
+                tags = [c.text.strip()
+                        for c in item.findall('category') if c.text]
+                posts.append({
+                    'title': title if title is not None else 'Untitled',
+                    'link': link,
+                    'pub': pub,
+                    'tags': tags,
+                })
             return posts
         except (requests.exceptions.RequestException, ET.ParseError) as e:
             last_err = e
             continue
-    # If we reach here, no feed was found. Report the attempted paths and
-    # the last error (if any) and return None to indicate a fetch failure.
+    # No RSS feed found
     print('No RSS feed found; tried paths:', [
           BASE_BLOG_URL + p for p in FEED_PATHS], file=sys.stderr)
     if last_err:
@@ -91,9 +81,65 @@ def render_markdown(posts, lang='en'):
     if not posts:
         return '\nTBA\n' if lang == 'en' else '\n暂无\n'
 
+    from datetime import datetime as _dt
+
+    def _format_date(dstr):
+        """Best-effort normalize a date string to YYYY-MM-DD.
+
+        Strategy:
+        1. RFC-2822/RFC-822 via email.utils.parsedate_to_datetime (covers common
+           RSS pubDate values).
+        2. ISO-8601 via fromisoformat (handle trailing 'Z' specially).
+        3. Small set of strptime fallbacks.
+        4. Return the raw trimmed string if all parsing fails.
+        """
+        if not dstr:
+            return ''
+
+        # 1) RFC-2822 (e.g. 'Wed, 01 Oct 2025 00:00:00 GMT')
+        try:
+            from email.utils import parsedate_to_datetime
+
+            dt = parsedate_to_datetime(dstr)
+            return dt.date().isoformat()
+        except Exception:
+            pass
+
+        # 2) ISO-8601 via fromisoformat (Python handles most variants except 'Z')
+        try:
+            s = dstr.strip()
+            if s.endswith('Z'):
+                # fromisoformat doesn't accept trailing 'Z' — convert to +00:00
+                s = s[:-1] + '+00:00'
+            dt = _dt.fromisoformat(s)
+            return dt.date().isoformat()
+        except Exception:
+            pass
+
+        # 3) A couple of strptime fallbacks for other common layouts
+        for fmt in ('%a, %d %b %Y %H:%M:%S %z', '%Y-%m-%dT%H:%M:%S%z', '%Y-%m-%dT%H:%M:%S'):
+            try:
+                dt = _dt.strptime(dstr, fmt)
+                return dt.date().isoformat()
+            except Exception:
+                continue
+
+        # 4) Give up: return trimmed original
+        return dstr.strip()
+
     lines = []
     for p in posts:
-        lines.append(f"- [{p['title']}]({p['link']})")
+        date_part = _format_date(p.get('pub'))
+        tags = p.get('tags') or []
+        tag_part = ''
+        if tags:
+            # Render up to 4 tags as inline code chips
+            visible = tags[:4]
+            tag_tokens = ' '.join(f'`{t}`' for t in visible)
+            tag_part = f' {tag_tokens}'
+        date_suffix = f" <small>({date_part})</small>" if date_part else ''
+        # Small date suffix (YYYY-MM-DD) followed by tag chips
+        lines.append(f"- [{p['title']}]({p['link']}){date_suffix}{tag_part}")
     lines.append('\n')
     return '\n'.join(lines)
 
@@ -154,7 +200,8 @@ def main():
     # Use a timezone-aware UTC timestamp to avoid DeprecationWarning with
     # datetime.utcnow(). Use datetime.now(timezone.utc) instead.
     from datetime import timezone
-    print('Updated READMEs with latest posts at', datetime.now(timezone.utc).isoformat())
+    print('Updated READMEs with latest posts at',
+          datetime.now(timezone.utc).isoformat())
     return 0
 
 

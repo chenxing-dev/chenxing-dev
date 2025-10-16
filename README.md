@@ -58,11 +58,11 @@
 ### Recent posts
 
 <!-- RECENT_BLOGS_START -->
-- [Checking Laptop Battery Status via Sysfs on Arch Linux](https://blog.chenxing-dev/battery-status-sysfs/)
-- [Minimal GRUB Customization Without grub-customizer](https://blog.chenxing-dev/grub/)
-- [Getting Started with Raspberry Pi 4B: Minimal Setup Guide](https://blog.chenxing-dev/raspberry-pi-4b-minimal-setup/)
-- [Building my OS-style portfolio site with Vue 3 and GSAP](https://blog.chenxing-dev/os-style-portfolio-vue3-gsap/)
-- [LAN Hosting Guide: Access Your Projects Across Home Devices](https://blog.chenxing-dev/lan-hosting-guide/)
+- [Checking Laptop Battery Status via Sysfs on Arch Linux](https://blog.chenxing-dev/battery-status-sysfs/) <small>(2025-10-01)</small> `arch linux` `linux` `system administration` `power management`
+- [Minimal GRUB Customization Without grub-customizer](https://blog.chenxing-dev/grub/) <small>(2025-10-01)</small> `grub` `bootloader` `configuration` `customization`
+- [Getting Started with Raspberry Pi 4B: Minimal Setup Guide](https://blog.chenxing-dev/raspberry-pi-4b-minimal-setup/) <small>(2025-10-01)</small> `raspberry pi` `linux` `terminal` `configuration`
+- [Building my OS-style portfolio site with Vue 3 and GSAP](https://blog.chenxing-dev/os-style-portfolio-vue3-gsap/) <small>(2025-09-30)</small> `vue 3` `gsap` `typescript` `tailwind css`
+- [LAN Hosting Guide: Access Your Projects Across Home Devices](https://blog.chenxing-dev/lan-hosting-guide/) <small>(2025-07-05)</small> `networking` `local server` `ssh` `web development`
 
 
 <!-- RECENT_BLOGS_END -->
