@@ -55,6 +55,14 @@
 
 <p align="center"><sub style="color:#6b7280">Note: GitHub Readme Stats may occasionally timeout or be rate limited; if the cards above fail to load, please refresh later.</sub></p>
 
+### Recent posts
+
+<!-- RECENT_BLOGS_START -->
+
+TBA
+
+<!-- RECENT_BLOGS_END -->
+
 ### 📬 Contact
 
 - **Weibo:** [@陈刑很刑](https://weibo.com/u/7874224893)

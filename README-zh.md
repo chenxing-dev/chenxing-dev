@@ -32,6 +32,8 @@
 - **[leung-cha](https://chenxing-dev.github.io/leung-cha/)** – 中式像素风煲凉茶制作交互 | React + react-dnd + TailwindCSS | [在线演示](https://chenxing-dev.github.io/leung-cha/)
 - **[linux-distro-quiz](https://chenxing-dev.github.io/linux-distro-quiz/)** – 找到适合你的 Linux 发行版 | React + Framer Motion | [在线演示](https://chenxing-dev.github.io/linux-distro-quiz/)
 - **[blog](https://github.com/chenxing-dev/blog)** – 新粗野主义风格技术博客 | Astro + TailwindCSS | [在线演示](https://blog.chenxing.dev/)
+  
+  
 - **[drink-tier-list](https://chenxing-dev.github.io/drink-tier-list/)** – 饮品排名列表 | Preact + TypeScript | [在线演示](https://drink.chenxing.dev)
 - **[startpage-alpine](https://chenxing-dev.github.io/startpage-alpine/)** – 轻量 TUI 风格 startpage | Vanilla JS + Alpine.js | [在线演示](https://chenxing.dev)
 
@@ -52,6 +54,14 @@
 </div>
 
 <p align="center"><sub style="color:#6b7280">提示：GitHub Readme Stats 服务偶尔会超时或限流，若上方图卡未加载，请稍后刷新。</sub></p>
+
+### 最近文章
+
+<!-- RECENT_BLOGS_START -->
+
+暂无
+
+<!-- RECENT_BLOGS_END -->
 
 ### 📬 联系方式
 
