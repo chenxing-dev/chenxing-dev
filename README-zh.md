@@ -12,9 +12,9 @@
   </a>
 </p>
 
-<p align="center">
-  <em>前端为主 · 注重交互体验与创意表达 · DIY 倾向</em>
-</p>
+非科班出身，主要通过自学与大量个人项目积累开发经验，尚无企业开发工作经历。
+
+当前专注提升：分支与 PR 流程、Conventional Commits 规范、代码审查流程与性能优化。
 
 ### 🛠️ 技术栈
 
@@ -29,18 +29,12 @@
 
 #### 交互式前端
 - **[chenxing-dev.github.io](https://github.com/chenxing-dev/chenxing-dev.github.io)** – Web 操作系统 | Vue + TypeScript | [在线演示](https://chenxing-dev.github.io)
-- **[leung-cha](https://chenxing-dev.github.io/leung-cha/)** – 中式像素风煲凉茶制作交互 | React + react-dnd + TailwindCSS | [在线演示](https://chenxing-dev.github.io/leung-cha/)
-- **[linux-distro-quiz](https://chenxing-dev.github.io/linux-distro-quiz/)** – 找到适合你的 Linux 发行版 | React + Framer Motion | [在线演示](https://chenxing-dev.github.io/linux-distro-quiz/)
 - **[blog](https://github.com/chenxing-dev/blog)** – 新粗野主义风格技术博客 | Astro + TailwindCSS | [在线演示](https://blog.chenxing.dev/)
-  
-  
-- **[drink-tier-list](https://chenxing-dev.github.io/drink-tier-list/)** – 饮品排名列表 | Preact + TypeScript | [在线演示](https://drink.chenxing.dev)
 - **[startpage-alpine](https://chenxing-dev.github.io/startpage-alpine/)** – 轻量 TUI 风格 startpage | Vanilla JS + Alpine.js | [在线演示](https://chenxing.dev)
 
 #### 工具与系统
 - **[Dotfiles](https://github.com/chenxing-dev/dotfiles)** – Arch Linux 配置（Qtile、Rofi、Yazi）与自动化脚本
 - **[File Transfer Tool](https://github.com/chenxing-dev/file-transfer)** – 局域网文件传输工具（Python, Flask）
-- **[Arduino RGB Controller](https://github.com/chenxing-dev/arduino-rgb-light)** – 可切换模式的 RGB 灯带控制器（C++, FastLED）
 
 ## 📊 GitHub 统计
 

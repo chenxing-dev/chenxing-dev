@@ -12,9 +12,9 @@
   </a>
 </p>
 
-<p align="center">
-  <em>Strong frontend focus · Interaction & creative expression · DIY tendency</em>
-</p>
+Self-taught frontend engineer from a non-CS background, developing through project delivery.
+
+Currently focused on: branch and PR workflows, Conventional Commits, code review process, and frontend performance optimization.
 
 ### 🛠️ Tech Stack
 
@@ -29,17 +29,13 @@
 
 #### Interactive Frontend
 - **[chenxing-dev.github.io](https://github.com/chenxing-dev/chenxing-dev.github.io)** – Web-based OS | Vue + TypeScript | [Live Demo](https://chenxing-dev.github.io)
-- **[leung-cha](https://chenxing-dev.github.io/leung-cha/)** – Interactive Chinese pixel-art herbal tea brewer | React + react-dnd + TailwindCSS | [Live Demo](https://chenxing-dev.github.io/leung-cha/)
-- **[linux-distro-quiz](https://chenxing-dev.github.io/linux-distro-quiz/)** – Find your ideal Linux distro | React + Framer Motion | [Live Demo](https://chenxing-dev.github.io/linux-distro-quiz/)
 - **[blog](https://github.com/chenxing-dev/blog)** – Neobrutalism-themed technical blog | Astro + TailwindCSS | [Live Demo](https://blog.chenxing.dev/)
-- **[drink-tier-list](https://chenxing-dev.github.io/drink-tier-list/)** – Personal beverage tier list | Preact + TypeScript | [Live Demo](https://drink.chenxing.dev)
 - **[startpage-alpine](https://chenxing-dev.github.io/startpage-alpine/)** – Minimal TUI-style startpage | Vanilla JS + Alpine.js | [Live Demo](https://chenxing.dev)
 
 
 #### Tools & Systems
 - **[Dotfiles](https://github.com/chenxing-dev/dotfiles)** – Arch Linux setup with Qtile, Rofi, Yazi, and automation
 - **[File Transfer Tool](https://github.com/chenxing-dev/file-transfer)** – Simple local network file sharing (Python, Flask)
-- **[Arduino RGB Controller](https://github.com/chenxing-dev/arduino-rgb-light)** – RGB LED controller with multiple modes (C++, FastLED)
 
 ## 📊 GitHub Stats
 
