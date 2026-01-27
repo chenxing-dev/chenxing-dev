@@ -1,4 +1,4 @@
-<h1 align="center">👨‍💻 <a href="https://github.com/chenxing-dev">陈刑 (chenxing-dev)</a></h1>
+<h1 align="center">🧑‍💻 <a href="https://github.com/chenxing-dev">陈刑 (chenxing-dev)</a></h1>
 
 <p align="center"><a href="./README.md">English</a> · <strong>中文</strong></p>
 
@@ -12,29 +12,11 @@
   </a>
 </p>
 
-非科班出身，主要通过自学与大量个人项目积累开发经验，尚无企业开发工作经历。
+本职不是码农，工作压力大时会写点代码解压。
 
-当前专注提升：分支与 PR 流程、Conventional Commits 规范、代码审查流程与性能优化。
+更喜欢轻松、非专业的小项目，做点好玩的东西；偶尔也会做和本职相关的东西，比如数据统计与可视化。
 
-### 🛠️ 技术栈
-
-**前端：**
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white) ![Vue](https://img.shields.io/badge/Vue\.js-4FC08D?style=flat&logo=vuedotjs&logoColor=white) ![React](https://img.shields.io/badge/React-61DAFB?style=flat&logo=react&logoColor=black)
- ![Astro](https://img.shields.io/badge/Astro-BC52EE?style=flat&logo=astro&logoColor=white) ![Tailwind](https://img.shields.io/badge/TailwindCSS-06B6D4?style=flat&logo=tailwindcss&logoColor=white)
-
-**工具与平台：**
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white) ![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white) ![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?style=flat&logo=arch-linux&logoColor=white)
-
-### 📁 项目亮点
-
-#### 交互式前端
-- **[chenxing-dev.github.io](https://github.com/chenxing-dev/chenxing-dev.github.io)** – Web 操作系统 | Vue + TypeScript | [在线演示](https://chenxing-dev.github.io)
-- **[blog](https://github.com/chenxing-dev/blog)** – 新粗野主义风格技术博客 | Astro + TailwindCSS | [在线演示](https://blog.chenxing.dev/)
-- **[startpage-alpine](https://chenxing-dev.github.io/startpage-alpine/)** – 轻量 TUI 风格 startpage | Vanilla JS + Alpine.js | [在线演示](https://chenxing.dev)
-
-#### 工具与系统
-- **[Dotfiles](https://github.com/chenxing-dev/dotfiles)** – Arch Linux 配置（Qtile、Rofi、Yazi）与自动化脚本
-- **[File Transfer Tool](https://github.com/chenxing-dev/file-transfer)** – 局域网文件传输工具（Python, Flask）
+代词：她。
 
 ## 📊 GitHub 统计
 
@@ -48,20 +30,3 @@
 </div>
 
 <p align="center"><sub style="color:#6b7280">提示：GitHub Readme Stats 服务偶尔会超时或限流，若上方图卡未加载，请稍后刷新。</sub></p>
-
-### 最近文章
-
-<!-- RECENT_BLOGS_START -->
-- [Checking Laptop Battery Status via Sysfs on Arch Linux](https://blog.chenxing-dev/battery-status-sysfs/) <small>(2025-10-01)</small> `arch linux` `linux` `system administration` `power management`
-- [Minimal GRUB Customization Without grub-customizer](https://blog.chenxing-dev/grub/) <small>(2025-10-01)</small> `grub` `bootloader` `configuration` `customization`
-- [Getting Started with Raspberry Pi 4B: Minimal Setup Guide](https://blog.chenxing-dev/raspberry-pi-4b-minimal-setup/) <small>(2025-10-01)</small> `raspberry pi` `linux` `terminal` `configuration`
-- [Building my OS-style portfolio site with Vue 3 and GSAP](https://blog.chenxing-dev/os-style-portfolio-vue3-gsap/) <small>(2025-09-30)</small> `vue 3` `gsap` `typescript` `tailwind css`
-- [LAN Hosting Guide: Access Your Projects Across Home Devices](https://blog.chenxing-dev/lan-hosting-guide/) <small>(2025-07-05)</small> `networking` `local server` `ssh` `web development`
-
-
-<!-- RECENT_BLOGS_END -->
-
-### 📬 联系方式
-
-- **微博：** [@陈刑很刑](https://weibo.com/u/7874224893)
-- **GitHub：** [chenxing-dev](https://github.com/chenxing-dev)
